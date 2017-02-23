@@ -1,0 +1,27 @@
+{
+  "name": "news-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hhsaito/News-Scraper.git"
+  },
+  "author": "hhsaito",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hhsaito/News-Scraper/issues"
+  },
+  "homepage": "https://github.com/hhsaito/News-Scraper#readme",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "cheerio": "^0.22.0",
+    "express": "^4.14.1",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.8.4",
+    "request": "^2.79.0"
+  }
+}

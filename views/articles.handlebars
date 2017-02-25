@@ -1,0 +1,28 @@
+  <header>
+    <h1>Mongo Scraper</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/articles">Saved Articles</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>ARS News Edition</h1>
+    <div id="waiting">
+      <ul>
+        <ul>
+        {{#each news}}
+          {{#if this.saved}}
+            <li>
+              <a href="{{this.link}}">{{this.title}}</a>
+              <form action="/delete/{{this.id}}?_method=PUT" method="POST">
+                <input type="hidden" name="saved" value="false">
+                <button type="submit">Delete from Saved</button>
+              </form>
+            </li>
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </main>

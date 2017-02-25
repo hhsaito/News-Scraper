@@ -1,0 +1,31 @@
+  <header>
+    <h1>Mongo Scraper</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/articles">Saved Articles</a></li>
+      </ul>
+    </nav>
+    <form class="create-update-form" action="/submit" method="POST">
+      <button type="submit">Scrape New Articles</button>
+    </form>
+  </header>
+  <main>
+    <h2>ARS News Edition</h1>
+    <div id="waiting">
+      <ul>
+        {{#each news}}
+          {{#unless this.saved}}
+            <li>
+              <a href="{{this.link}}">{{this.title}}</a>
+              <form action="/{{this.id}}?_method=PUT" method="POST">
+                <input type="hidden" name="saved" value="true">
+                <button type="submit">Save Article</button>
+              </form>
+            </li>
+          {{/unless}}
+        {{/each}}
+      </ul>
+      </ul>
+    </div>
+  </main>

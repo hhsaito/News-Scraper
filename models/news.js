@@ -19,7 +19,15 @@ var NewsSchema = new mongoose.Schema({
   comments: [{
     type: Schema.Types.ObjectId,
     ref: "Comment"
-  }]
+  }],
+  date: {
+    type: Date,
+    default: Date.now
+  },
+  saved: {
+    type: Boolean,
+    default: false
+  }
 });
 
 // Save the Library model using the LibrarySchema
